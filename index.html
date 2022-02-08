@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypingTest</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+
+    }
+
+    body {
+
+        height: 100vh;
+        background-color: rgb(20, 20, 20);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+    }
+
+    .cont {
+        background-color: rgb(59, 59, 59);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 70vh;
+        width: 90%;
+        border: 5px solid white;
+    }
+
+    .container {
+        overflow: hidden;
+        width: 100%;
+        height: 40px;
+        font-size: 30px;
+        color: rgb(224, 224, 224);
+    }
+
+    .input {
+        width: 100%;
+        font-size: 30px;
+        box-sizing: border-box;
+        padding: 10px 0;
+        overflow: hidden;
+        color: rgb(206, 206, 206);
+        background-color: transparent;
+        outline: none;
+        border: none;
+    }
+
+    .typingcontainer {
+        box-sizing: border-box;
+        padding: 10px;
+        width: 40%;
+        min-width: 280px;
+        background-color: rgb(29, 29, 29);
+    }
+
+    .time {
+        padding: 30px 0;
+        width: 20%;
+        min-width: 206px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-start;
+
+
+    }
+
+    .asch {
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        flex-flow: column;
+        height: 100px;
+        width: 20%;
+        min-width: 180px;
+    }
+
+
+#mistake{
+    animation-name: blink;
+    animation-duration:1s ;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+    from{
+        color: red;
+    }
+    to{
+        color: white;
+    }
+    
+}
+    #From {
+        text-align: center;
+        padding: 5px 0px 5px 10px;
+        font-size: 20px;
+    }
+
+    #start {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(105, 133, 158, 0.493);
+        backdrop-filter: blur(5px);
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+    }
+
+    #start #startbtn {
+        padding: 10px 30px;
+        font-size: 20px;
+        margin: 30px;
+        border-radius: 10px;
+        border: 5px solid white;
+        cursor: pointer;
+        transition: .5s all ease;
+    }
+
+    #startbtn:hover {
+        background-color: aqua;
+    }
+</style>
+
+<body>
+    <div id="start">
+        <input list="from" spellcheck="false" id="From" placeholder="Select Time" required>
+        <datalist id="from">
+            <option value="1 min">
+            <option value="2 min">
+            <option value="5 min">
+            <option value="30 min">
+        </datalist>
+
+        <button id="startbtn" onclick="starttest()">
+            Start
+        </button>
+
+    </div>
+    <div class="cont">
+
+        <div class="asch">
+            <h3>Typos = <span id="typos">0</span></h3>
+            <h1 id="mistake"></h1>
+
+        </div>
+        <div class="typingcontainer">
+            <div class="container" id="text">
+                A computer is a digital electronic machine that can be programmed to carry out sequences of arithmetic or logical operations (computation) automatically. Modern computers can perform generic sets of operations known as programs. These programs enable computers to perform a wide range of tasks. A computer system is a "complete" computer that includes the hardware, operating system (main software), and peripheral equipment needed and used for "full" operation. This term may also refer to a group of computers that are linked and function together, such as a computer network or computer cluster.
+                A broad range of industrial and consumer products use computers as control systems. Simple special-purpose devices like microwave ovens and remote controls are included, as are factory devices like industrial robots and computer-aided design, as well as general-purpose devices like personal computers and mobile devices like smartphones. Computers power the
+                Early computers were meant to be used only for calculations. Simple manual instruments like the abacus have aided people in doing calculations since ancient times. Early in the Industrial Revolution, some mechanical devices were built to automate long tedious tasks, such as guiding patterns for looms. More sophisticated electrical machines did specialized analog calculations in the early 20th century. The first digital electronic calculating machines were developed during World War II. The first semiconductor transistors in the late 1940s were followed by the silicon-based MOSFET (MOS transistor) and monolithic integrated circuit (IC) chip technologies in the late 1950s, leading to the microprocessor and the microcomputer revolution in the 1970s. The speed, power and versatility of computers have been increasing dramatically ever since then, with transistor counts increasing at a rapid pace (as predicted by Moore's law), leading to the Digital Revolution during the late 20th to early 21st centuries.
+                Conventionally, a modern computer consists of at least one processing element, typically a central processing unit (CPU) in the form of a microprocessor, along with some type of computer memory, typically semiconductor memory chips. The processing element carries out arithmetic and logical operations, and a sequencing and control unit can change the order of operations in response to stored information. Peripheral devices include input devices (keyboards, mice, joystick, etc.), output devices (monitor screens, printers, etc.), and input/output devices that perform both functions (e.g., the 2000s-era touchscreen). Peripheral devices allow information to be retrieved from an external source and they enable the result of operations to be saved and retrieved.
+                A compiler is a special program that processes statements written in a particular programming language and turns them into machine language or "code" that a computer's processor uses. Typically, a programmer writes language statements in a language such as Pascal or C one line at a time using an editor. The file that is created contains what are called the source statements. The programmer then runs the appropriate language compiler, specifying the name of the file that contains the source statements.
+
+When executing (running), the compiler first parses (or analyzes) all of the language statements syntactically one after the other and then, in one or more successive stages or "passes", builds the output code, making sure that statements that refer to other statements are referred to correctly in the final code. Traditionally, the output of the compilation has been called object code or sometimes an object module . (Note that the term "object" here is not related to object-oriented programming.) The object code is machine code that the processor can execute one instruction at a time.
+
+The Java programming language, a language used in object-oriented programming, introduced the possibility of compiling output (called bytecode ) that can run on any computer system platform for which a Java virtual machine or bytecode interpreter is provided to convert the bytecode into instructions that can be executed by the actual hardware processor. Using this virtual machine, the bytecode can optionally be recompiled at the execution platform by a just-in-time compiler. (See also: Java compiler)
+Traditionally in some operating systems, an additional step was required after compilation that of resolving the relative location of instructions and data when more than one object module was to be run at the same time and they cross-referred to each other's instruction sequences or data. This process was sometimes called linkage editing and the output known as a load module.
+A compiler works with what are sometimes called 3GL and higher-level languages. An assembler works on programs written using a processor's assembler language.
+            </div>
+            <input type="text" name="" id="input" class="input" spellcheck="false"></input>
+        </div>
+        <div class="time">
+            <h3>Remaining :&nbsp;&nbsp;<span id="remaining">00:00</span>&nbsp;sec</h3>
+
+        </div>
+
+
+    </div>
+
+
+
+
+</body>
+<script>
+
+    // let text = document.getElementById("text").innerText;
+    const input = document.getElementById("input");
+
+    // let space = text.innerText.indexOf(" ");
+
+    // let str = text.innerText.substring(0, space);
+
+    let i = 0;
+    input.addEventListener("keyup", (event) => {
+        if (event.keyCode == 32) {
+            let cmpstr = document.getElementById("input").value;
+
+            let text = document.getElementById("text").innerText;
+            let space = text.indexOf(" ");
+            space++;
+            let str = text.substring(0, space);
+            // console.log(str);
+            text = text.replace(str, "");
+            // let arr = text.split(" ");
+            document.getElementById("text").innerText = text;
+
+
+
+            // console.log(cmpstr);
+
+            if (str !== cmpstr) {
+                i++;
+               document.getElementById("typos").innerText=i;
+               document.getElementById("mistake").innerText=cmpstr;
+            }
+
+
+
+
+            document.getElementById("input").value = "";
+        }
+
+
+    });
+    function starttest() {
+        if (document.getElementById("From").value !== "") {
+            document.getElementById("start").style.display = "none";
+            let t = document.getElementById("From").value;
+            t = parseInt(t);
+            console.log(t);
+            t = t * 59;
+            document.getElementById("input").focus();
+
+
+            const timeinterval = setInterval(() => {
+
+                let min = Math.floor(t / 60);
+                let sec = t % 60;
+                document.getElementById("remaining").innerText = min + " : " + sec;
+                if (t > 0) {
+                    t--;
+
+                }
+                else {
+                    clearInterval(timeinterval);
+                    document.getElementById("start").style.display = "flex";
+                }
+
+            }, 1000);
+        }
+    }
+
+</script>
+
+</html>
